@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import { Button, TextInput } from "react-native-web";
 
-export default function App() {
+function App() {
   return (
     <View style={styles.container}>
       <Image
@@ -35,10 +35,40 @@ export default function App() {
   );
 }
 
+export default function tela2(){
+  return(
+    <View style={styles.container}>
+      <SafeAreaView>
+        <Text style={{fontSize:20, margin:30}}>Cadastro</Text>
+      </SafeAreaView>
+      <Text>Nome</Text>
+      <TextInput style={styles.input}></TextInput>
+      <Text>Email</Text>
+      <TextInput style={styles.input}></TextInput>
+      <Text>Senha</Text>
+      <TextInput style={styles.input}></TextInput>
+      <Button title='Cadastrar' style={styles.button2}></Button>
+    </View>
+  )
+}
+
+function tela3(){
+  return(
+    <View style={styles.container}>
+      <SafeAreaView>
+        <Text style={{fontSize:20, margin:30, bottom:90}}>Esqueceu a senha</Text>
+      </SafeAreaView>
+      <Text>Email</Text>
+      <TextInput style={styles.input}></TextInput>
+      <Button title='Enviar'></Button>
+    </View>
+  )
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#d3cddfff",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -46,9 +76,14 @@ const styles = StyleSheet.create({
     width: 250,
     height: 250,
   },
-  button: {
+  button1: {
     width: 200,
     marginTop: 50,
+  },
+  button2: {
+    width: 200,
+    marginTop: 20,
+    backgroundColor: "#61e415ff",
   },
   input: {
     height: 40,
